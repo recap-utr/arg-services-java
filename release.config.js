@@ -26,10 +26,11 @@ const config = {
           "buf generate --include-imports buf.build/recap/arg-services",
       },
     ],
+    "gradle-semantic-release-plugin",
     [
       "@semantic-release/github",
       {
-        // assets: "dist/*.tgz",
+        assets: "build/libs/*.jar",
         failComment: false,
         addReleases: "bottom",
       },
@@ -38,6 +39,7 @@ const config = {
       "@semantic-release/git",
       {
         message: "chore(release): ${nextRelease.version}",
+        assets: ["gradle.properties", "CHANGELOG.md"],
       },
     ],
   ],

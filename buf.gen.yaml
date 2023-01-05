@@ -1,9 +1,9 @@
 version: v1
 managed:
   enabled: true
-  java_package_prefix: de.uni_trier.recap
+  java_package_prefix: de.unitrier.recap
 plugins:
   - plugin: buf.build/protocolbuffers/java:v21.12
-    out: src/java
+    out: src/main/java
   - plugin: buf.build/grpc/java:v1.51.1
-    out: src/java
+    out: src/main/java
