@@ -11,4 +11,4 @@ Documentation can be found at the [Buf Schema Registry](https://buf.build/recap/
 
 ## Generate Locally
 
-`rm -rf ./src && buf generate buf.build/recap/arg-services --include-imports && gradle fatJar`
+`rm -rf ./src && buf generate buf.build/recap/arg-services --include-imports && gradle shadowJar`

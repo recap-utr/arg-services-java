@@ -12,6 +12,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
     // id 'com.google.protobuf' version '0.8.18' // not needed due to buf.build
 }
 
@@ -29,14 +30,8 @@ dependencies {
     compileOnly "org.apache.tomcat:annotations-api:6.0.53" // necessary for Java 9+
 }
 
-task fatJar(type: Jar) {
-    manifest.from jar.manifest
-    classifier = 'all'
-    duplicatesStrategy = 'exclude'
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-    with jar
+shadowJar {
+    mergeServiceFiles()
 }
 
 version = project.findProperty('version')
