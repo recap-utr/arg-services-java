@@ -29,6 +29,16 @@ dependencies {
     compileOnly "org.apache.tomcat:annotations-api:6.0.53" // necessary for Java 9+
 }
 
+task fatJar(type: Jar) {
+    manifest.from jar.manifest
+    classifier = 'all'
+    duplicatesStrategy = 'exclude'
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}
+
 version = project.findProperty('version')
 group = 'de.uni-trier.recap'
 

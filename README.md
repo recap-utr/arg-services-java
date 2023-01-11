@@ -8,3 +8,7 @@ Along with the Protobuf files, the project also contains code for generating lib
 - [TypeScript](https://www.npmjs.com/package/arg-services)
 
 Documentation can be found at the [Buf Schema Registry](https://buf.build/recap/arg-services).
+
+## Generate Locally
+
+`rm -rf ./src && buf generate buf.build/recap/arg-services --include-imports && gradle fatJar`
