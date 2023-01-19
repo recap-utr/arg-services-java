@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/recap-utr/arg-services-java/compare/v1.0.3...v1.0.4) (2023-01-19)
+
+
+### Bug Fixes
+
+* add nexus plugin for fully automated releases ([c6dd6a6](https://github.com/recap-utr/arg-services-java/commit/c6dd6a68d3b520a90481665ee2b151512a1bdeac))
+
 ## [1.0.3](https://github.com/recap-utr/arg-services-java/compare/v1.0.2...v1.0.3) (2023-01-19)
 
 
