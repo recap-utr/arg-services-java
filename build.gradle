@@ -48,6 +48,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifactId = "arg-services"
+            // artifacts = [javadocJar, sourcesJar]
             from components.java
             pom {
                 name = "Argumentation Microservices"
