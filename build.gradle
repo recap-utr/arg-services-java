@@ -40,9 +40,10 @@ group = 'de.uni-trier.recap'
 publishing {
     publications {
         maven(MavenPublication) {
+            artifactId = "arg-services"
             from components.java
             pom {
-                name = 'arg-services'
+                name = "Argumentation Microservices"
                 description = 'gRPC definitions for microservice-based argumentation machines'
                 url = 'https://github.com/recap-utr/arg-services'
                 licenses {
