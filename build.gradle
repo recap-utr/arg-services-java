@@ -34,6 +34,11 @@ shadowJar {
     mergeServiceFiles()
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 version = project.findProperty('version')
 group = 'de.uni-trier.recap'
 
