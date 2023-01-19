@@ -1,10 +1,9 @@
 # https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle
 # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
 on:
-  workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 jobs:
   release:
     runs-on: ubuntu-latest
