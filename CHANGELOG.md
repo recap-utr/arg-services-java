@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/recap-utr/arg-services-java/compare/v1.0.4...v1.0.5) (2023-01-20)
+
+
+### Bug Fixes
+
+* add grpc to api dependencies ([b8a6d9a](https://github.com/recap-utr/arg-services-java/commit/b8a6d9a4260ccc40bffc29d71d2f613e2c908d8a))
+* explicitly support java 11 ([763ca75](https://github.com/recap-utr/arg-services-java/commit/763ca75430f43ca07762d5c8c144e26e7c0a02aa))
+
 ## [1.0.4](https://github.com/recap-utr/arg-services-java/compare/v1.0.3...v1.0.4) (2023-01-19)
 
 
