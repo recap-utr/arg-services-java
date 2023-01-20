@@ -26,9 +26,9 @@ def javaVersion = 11
 
 dependencies {
     runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
-    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
-    implementation "io.grpc:grpc-stub:${grpcVersion}"
-    implementation "io.grpc:grpc-services:${grpcVersion}"
+    api "io.grpc:grpc-protobuf:${grpcVersion}"
+    api "io.grpc:grpc-stub:${grpcVersion}"
+    api "io.grpc:grpc-services:${grpcVersion}"
     compileOnly "org.apache.tomcat:annotations-api:6.0.53" // necessary for Java 9+
 }
 
