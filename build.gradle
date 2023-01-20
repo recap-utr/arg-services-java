@@ -22,6 +22,7 @@ repositories {
 }
 
 def grpcVersion = "1.52.1"
+def javaVersion = 11
 
 dependencies {
     runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
@@ -38,6 +39,9 @@ shadowJar {
 }
 
 java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(javaVersion)
+    }
     withJavadocJar()
     withSourcesJar()
 }
