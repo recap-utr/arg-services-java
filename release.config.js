@@ -40,6 +40,7 @@ const config = {
       {
         assets: "build/libs/*.jar",
         failComment: false,
+        successComment: false,
         addReleases: "bottom",
       },
     ],
