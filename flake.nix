@@ -21,10 +21,6 @@
         ...
       }: {
         packages = {
-          releaseEnv = pkgs.buildEnv {
-            name = "release-env";
-            paths = with pkgs; [nodejs];
-          };
           bufGenerate = pkgs.writeShellApplication {
             name = "buf-generate";
             text = ''
