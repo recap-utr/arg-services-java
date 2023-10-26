@@ -30,8 +30,7 @@ const config = {
       // Buf
       "@semantic-release/exec",
       {
-        prepareCmd:
-          "buf mod update && buf generate --include-imports buf.build/recap/arg-services",
+        prepareCmd: "nix run .#bufGenerate",
       },
     ],
     "gradle-semantic-release-plugin",

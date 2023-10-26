@@ -19,17 +19,22 @@
         lib,
         self',
         ...
-      }: let
-        packages = with pkgs; [gradle buf];
-      in {
+      }: {
         packages = {
           releaseEnv = pkgs.buildEnv {
             name = "release-env";
-            paths = packages ++ (with pkgs; [nodejs]);
+            paths = with pkgs; [nodejs];
+          };
+          bufGenerate = pkgs.writeShellApplication {
+            name = "buf-generate";
+            text = ''
+              ${lib.getExe pkgs.buf} mod update
+              ${lib.getExe pkgs.buf} generate --include-imports buf.build/recap/arg-services
+            '';
           };
         };
         devShells.default = pkgs.mkShell {
-          inherit packages;
+          packages = with pkgs; [gradle];
           shellHook = ''
             ${lib.getExe pkgs.gradle} wrapper
           '';
