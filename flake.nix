@@ -20,12 +20,12 @@
         self',
         ...
       }: let
-        packages = with pkgs; [jdk11 gradle buf protobuf];
+        packages = with pkgs; [gradle buf];
       in {
         packages = {
           releaseEnv = pkgs.buildEnv {
             name = "release-env";
-            paths = packages;
+            paths = packages ++ (with pkgs; [nodejs]);
           };
         };
         devShells.default = pkgs.mkShell {
