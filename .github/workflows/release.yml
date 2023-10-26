@@ -7,23 +7,14 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-      - uses: actions/setup-java@v3
-        with:
-          java-version: "11"
-          distribution: "adopt"
-      - uses: bufbuild/buf-setup-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: arduino/setup-protoc@v1
-        with:
-          version: "3.x"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: cycjimmy/semantic-release-action@v3
+      - uses: DeterminateSystems/nix-installer-action@v6
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+      - run: nix profile install .#releaseEnv
+      - uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_ACTOR: ${{ github.actor }}
@@ -32,10 +23,10 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         with:
-          semantic_version: 19
+          semantic_version: 22
           extra_plugins: |
             @semantic-release/git@10
             @semantic-release/changelog@6
             @semantic-release/exec@6
-            conventional-changelog-conventionalcommits@5
-            gradle-semantic-release-plugin@1.7.4
+            conventional-changelog-conventionalcommits@7
+            gradle-semantic-release-plugin@1.7
