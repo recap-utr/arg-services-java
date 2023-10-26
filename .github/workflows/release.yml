@@ -29,4 +29,4 @@ jobs:
             @semantic-release/changelog@^6
             @semantic-release/exec@^6
             conventional-changelog-conventionalcommits@^7
-            gradle-semantic-release-plugin@^1.7
+            gradle-semantic-release-plugin@^1
