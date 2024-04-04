@@ -21,7 +21,7 @@ repositories {
 	mavenCentral()
 }
 
-def grpcVersion = "1.59.0"
+def grpcVersion = "1.63.0"
 
 dependencies {
 	runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
