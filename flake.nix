@@ -24,13 +24,6 @@
         }:
         {
           packages = {
-            releaseEnv = pkgs.buildEnv {
-              name = "release-env";
-              paths = with pkgs; [
-                jdk
-                gradle
-              ];
-            };
             bufGenerate = pkgs.writeShellApplication {
               name = "buf-generate";
               text = ''
