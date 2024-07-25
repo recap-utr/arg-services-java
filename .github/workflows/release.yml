@@ -15,6 +15,7 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@v7
       - uses: cycjimmy/semantic-release-action@v4
         env:
+          BUF_TOKEN: ${{ secrets.BUF_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_ACTOR: ${{ github.actor }}
           OSSRH_ACTOR: ${{ secrets.OSSRH_ACTOR }}
