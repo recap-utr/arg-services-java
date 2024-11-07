@@ -23,10 +23,10 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         with:
-          semantic_version: ^23
+          semantic_version: ^24
           extra_plugins: |
             @semantic-release/git@^10
             @semantic-release/changelog@^6
             @semantic-release/exec@^6
-            conventional-changelog-conventionalcommits@^7
+            conventional-changelog-conventionalcommits@^8
             gradle-semantic-release-plugin@^1
