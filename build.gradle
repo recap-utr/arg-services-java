@@ -21,14 +21,15 @@ repositories {
 	mavenCentral()
 }
 
-def grpcVersion = "1.59.0"
+def grpcVersion = "1.69.0"
 
 dependencies {
-	runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+	api "com.google.protobuf:protobuf-java:4.29.1"
+	api "io.grpc:grpc-core:${grpcVersion}"
 	api "io.grpc:grpc-protobuf:${grpcVersion}"
 	api "io.grpc:grpc-stub:${grpcVersion}"
-	api "io.grpc:grpc-services:${grpcVersion}"
 	compileOnly "org.apache.tomcat:annotations-api:6.0.53" // necessary for Java 9+
+	runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
 }
 
 javadoc.options.addStringOption('Xdoclint:none', '-quiet')

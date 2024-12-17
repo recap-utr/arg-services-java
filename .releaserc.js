@@ -30,7 +30,7 @@ module.exports = {
       // Buf
       "@semantic-release/exec",
       {
-        prepareCmd: "nix run .#bufGenerate",
+        prepareCmd: "nix run .#buf-generate",
       },
     ],
     "gradle-semantic-release-plugin",
@@ -47,7 +47,7 @@ module.exports = {
       "@semantic-release/git",
       {
         message: "chore(release): ${nextRelease.version}",
-        assets: ["gradle.properties", "CHANGELOG.md", "buf.lock"],
+        assets: ["gradle.properties", "CHANGELOG.md"],
       },
     ],
   ],

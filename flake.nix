@@ -6,8 +6,6 @@
   };
   outputs =
     inputs@{
-      self,
-      nixpkgs,
       flake-parts,
       systems,
       ...
@@ -17,18 +15,15 @@
       perSystem =
         {
           pkgs,
-          system,
           lib,
-          self',
           ...
         }:
         {
           packages = {
-            bufGenerate = pkgs.writeShellApplication {
+            buf-generate = pkgs.writeShellApplication {
               name = "buf-generate";
               text = ''
-                ${lib.getExe pkgs.buf} mod update
-                ${lib.getExe pkgs.buf} generate --include-imports buf.build/recap/arg-services
+                ${lib.getExe pkgs.buf} generate
               '';
             };
           };

@@ -11,4 +11,4 @@ Documentation can be found at the [Buf Schema Registry](https://buf.build/recap/
 
 ## Generate Locally
 
-`rm -rf ./src && nix run .#bufGenerate && gradle shadowJar`
+`rm -rf ./src && nix run .#buf-generate && gradle shadowJar`
