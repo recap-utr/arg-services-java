@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.2](https://github.com/recap-utr/arg-services-java/compare/v1.5.1...v1.5.2) (2024-12-18)
+
+### Bug Fixes
+
+* **deps:** bump arg-services to v1.5.2 ([2e40cd7](https://github.com/recap-utr/arg-services-java/commit/2e40cd7c481df650e70fb9b133d808347e8b3b8c))
+
 ## [1.5.1](https://github.com/recap-utr/arg-services-java/compare/v1.5.0...v1.5.1) (2024-04-09)
 
 
