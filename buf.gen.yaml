@@ -6,7 +6,7 @@ managed:
       value: de.uni_trier.recap
 clean: true
 inputs:
-  - module: buf.build/recap/arg-services:v1.5.1
+  - module: buf.build/recap/arg-services:v1.5.2
 plugins:
   - protoc_builtin: java
     out: src/main/java
