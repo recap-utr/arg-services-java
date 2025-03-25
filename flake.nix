@@ -22,7 +22,6 @@
           packages = {
             buf-generate = pkgs.writeShellApplication {
               name = "buf-generate";
-              runtimeInputs = with pkgs; [ protobuf ];
               text = ''
                 ${lib.getExe pkgs.buf} generate
               '';

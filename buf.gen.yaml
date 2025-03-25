@@ -8,6 +8,9 @@ clean: true
 inputs:
   - module: buf.build/recap/arg-services:v1.5.3
 plugins:
-  - protoc_builtin: java
+  - remote: buf.build/protocolbuffers/java:v30.1
+    out: src/main/java
+    include_imports: true
+  - remote: buf.build/grpc/java:v1.71.0
     out: src/main/java
     include_imports: true
