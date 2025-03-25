@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.5](https://github.com/recap-utr/arg-services-java/compare/v1.5.4...v1.5.5) (2025-03-25)
+
+### Bug Fixes
+
+* generate grpc code again ([99971c9](https://github.com/recap-utr/arg-services-java/commit/99971c9b6c15b97ccc7c8135ac99b4eaa407f219))
+
 ## [1.5.4](https://github.com/recap-utr/arg-services-java/compare/v1.5.3...v1.5.4) (2025-02-06)
 
 ### Bug Fixes
