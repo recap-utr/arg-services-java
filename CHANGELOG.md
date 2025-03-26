@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.6](https://github.com/recap-utr/arg-services-java/compare/v1.5.5...v1.5.6) (2025-03-26)
+
+### Bug Fixes
+
+* **deps:** add grpc-services ([d1e18e0](https://github.com/recap-utr/arg-services-java/commit/d1e18e0efcb8f43bfda5726615a9be939f75351f))
+
 ## [1.5.5](https://github.com/recap-utr/arg-services-java/compare/v1.5.4...v1.5.5) (2025-03-25)
 
 ### Bug Fixes
