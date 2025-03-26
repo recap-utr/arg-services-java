@@ -27,6 +27,7 @@ dependencies {
 	api "com.google.protobuf:protobuf-java:4.30.1"
 	api "io.grpc:grpc-core:${grpcVersion}"
 	api "io.grpc:grpc-protobuf:${grpcVersion}"
+	api "io.grpc:grpc-services:${grpcVersion}"
 	api "io.grpc:grpc-stub:${grpcVersion}"
 	compileOnly "org.apache.tomcat:annotations-api:6.0.53" // necessary for Java 9+
 	runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
