@@ -18,8 +18,8 @@ jobs:
           BUF_TOKEN: ${{ secrets.BUF_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_ACTOR: ${{ github.actor }}
-          OSSRH_ACTOR: ${{ secrets.OSSRH_ACTOR }}
-          OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
+          SONATYPE_ACTOR: ${{ secrets.SONATYPE_ACTOR }}
+          SONATYPE_TOKEN: ${{ secrets.SONATYPE_TOKEN }}
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         with:
