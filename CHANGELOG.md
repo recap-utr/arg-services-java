@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.8](https://github.com/recap-utr/arg-services-java/compare/v1.5.7...v1.5.8) (2025-05-27)
+
+### Bug Fixes
+
+* **deps:** bump arg-services to v1.5.5 ([40f503d](https://github.com/recap-utr/arg-services-java/commit/40f503d3eca9727c0d205f03478fef31b2cac5b6))
+
 ## [1.5.7](https://github.com/recap-utr/arg-services-java/compare/v1.5.6...v1.5.7) (2025-05-23)
 
 ### Bug Fixes
