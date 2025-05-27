@@ -21,8 +21,8 @@ jobs:
           BUF_TOKEN: ${{ secrets.BUF_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_ACTOR: ${{ github.actor }}
-          SONATYPE_ACTOR: ${{ secrets.SONATYPE_ACTOR }}
-          SONATYPE_TOKEN: ${{ secrets.SONATYPE_TOKEN }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         with:
