@@ -16,7 +16,7 @@ jobs:
         with:
           name: recap
           authToken: ${{ secrets.CACHIX_TOKEN }}
-      - uses: cycjimmy/semantic-release-action@v4
+      - uses: cycjimmy/semantic-release-action@b12c8f6015dc215fe37bc154d4ad456dd3833c90 # v6.0.0
         env:
           BUF_TOKEN: ${{ secrets.BUF_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
