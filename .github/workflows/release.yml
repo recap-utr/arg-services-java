@@ -26,7 +26,7 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         with:
-          semantic_version: ^24
+          semantic_version: ^25.0.0
           extra_plugins: |
             @semantic-release/git@^10
             @semantic-release/changelog@^6
