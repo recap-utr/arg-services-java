@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.10](https://github.com/recap-utr/arg-services-java/compare/v1.5.9...v1.5.10) (2026-10-14)
+
+### Bug Fixes
+
+* **deps:** update protobuf to 4.34 and grpc to 1.82 via boms ([823bf50](https://github.com/recap-utr/arg-services-java/commit/823bf50eaacc512d314dddc7befb3581a323376a))
+* use common protos for google.api types ([4241eb2](https://github.com/recap-utr/arg-services-java/commit/4241eb2da1598eab1fcc2d66f2d1fe2524306ba6))
+
 ## [1.5.9](https://github.com/recap-utr/arg-services-java/compare/v1.5.8...v1.5.9) (2025-06-01)
 
 ### Bug Fixes
