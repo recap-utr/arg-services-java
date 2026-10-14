@@ -18,17 +18,16 @@
           lib,
           ...
         }:
+        let
+          packages = [ pkgs.buf ];
+        in
         {
-          packages = {
-            buf-generate = pkgs.writeShellApplication {
-              name = "buf-generate";
-              text = ''
-                ${lib.getExe pkgs.buf} generate
-              '';
-            };
+          packages.release-env = pkgs.buildEnv {
+            name = "release-env";
+            paths = packages;
           };
           devShells.default = pkgs.mkShell {
-            packages = with pkgs; [ gradle ];
+            packages = packages ++ [ pkgs.gradle ];
             shellHook = ''
               ${lib.getExe pkgs.gradle} wrapper
             '';

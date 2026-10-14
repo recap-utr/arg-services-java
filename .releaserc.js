@@ -30,7 +30,7 @@ module.exports = {
       // Buf
       "@semantic-release/exec",
       {
-        prepareCmd: "nix run .#buf-generate",
+        prepareCmd: "buf generate",
       },
     ],
     "gradle-semantic-release-plugin",
