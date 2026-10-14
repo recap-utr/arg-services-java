@@ -9,8 +9,10 @@ managed:
 clean: true
 inputs:
   - module: buf.build/recap/arg-services:v1.5.6
+# oldest protobuf 4.x and grpc releases to avoid conflicts with other packages,
+# keep in sync with the BOMs in build.gradle
 plugins:
-  - remote: buf.build/protocolbuffers/java:v30.1
+  - remote: buf.build/protocolbuffers/java:v34.0
     out: src/main/java
-  - remote: buf.build/grpc/java:v1.71.0
+  - remote: buf.build/grpc/java:v1.82.0
     out: src/main/java
