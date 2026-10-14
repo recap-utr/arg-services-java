@@ -1,6 +1,8 @@
 version: v2
 managed:
   enabled: true
+  disable:
+    - module: buf.build/googleapis/googleapis
   override:
     - file_option: java_package_prefix
       value: de.uni_trier.recap
@@ -10,7 +12,5 @@ inputs:
 plugins:
   - remote: buf.build/protocolbuffers/java:v30.1
     out: src/main/java
-    include_imports: true
   - remote: buf.build/grpc/java:v1.71.0
     out: src/main/java
-    include_imports: true
