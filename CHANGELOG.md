@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.11](https://github.com/recap-utr/arg-services-java/compare/v1.5.10...v1.5.11) (2026-10-14)
+
+### Bug Fixes
+
+* trigger release ([9e37746](https://github.com/recap-utr/arg-services-java/commit/9e37746473b19c35540794fde299aeb6d9b02445))
+
 ## [1.5.10](https://github.com/recap-utr/arg-services-java/compare/v1.5.9...v1.5.10) (2026-10-14)
 
 ### Bug Fixes
