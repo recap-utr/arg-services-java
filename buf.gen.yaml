@@ -8,7 +8,7 @@ managed:
       value: de.uni_trier.recap
 clean: true
 inputs:
-  - module: buf.build/recap/arg-services:v1.5.6
+  - module: buf.build/recap/arg-services:v1.6.0
 # oldest protobuf 4.x and grpc releases to avoid conflicts with other packages,
 # keep in sync with the BOMs in build.gradle
 plugins:
