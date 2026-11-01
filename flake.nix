@@ -13,11 +13,7 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
       perSystem =
-        {
-          pkgs,
-          lib,
-          ...
-        }:
+        { pkgs, ... }:
         let
           packages = [ pkgs.buf ];
         in
@@ -27,9 +23,9 @@
             paths = packages;
           };
           devShells.default = pkgs.mkShell {
-            packages = packages ++ [ pkgs.gradle ];
+            packages = packages ++ [ pkgs.gradle_9 ];
             shellHook = ''
-              ${lib.getExe pkgs.gradle} wrapper
+              gradle wrapper
             '';
           };
         };
